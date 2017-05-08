@@ -1,0 +1,128 @@
+{
+  "info": {
+    "name": "Joe",
+    "lastname": "Johnson",
+    "jobtitle": "Front-end Developer",
+    "details": [
+      {
+        "id": 0,
+        "title": "mobile",
+        "description": "+1 123 456 789"
+      },
+      {
+        "id": 1,
+        "title": "email",
+        "description": "joe@johnson.com"
+      },
+      {
+        "id": 2,
+        "title": "website",
+        "description": "http://johnson.com"
+      }
+    ],
+    "photo":""
+  },
+  "sections": [
+    {
+      "id": 0,
+      "type": "timerange",
+      "title": "Education",
+      "items": [
+        {
+          "id": 0,
+          "title": "University of Cambridge",
+          "description": "IT",
+          "timerange": "09.2013-02.2015"
+        },
+        {
+          "id": 1,
+          "title": "University of California",
+          "description": "IT",
+          "timerange": "09.2012-02.2013"
+        },
+        {
+          "id": 2,
+          "title": "University of Cambridge",
+          "description": "Mathematics",
+          "timerange": "09.2010-02.2012"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "type": "timerange",
+      "title": "Experience",
+      "items": [
+        {
+          "id": 0,
+          "title": "Apple",
+          "description": "Front-end Developer",
+          "timerange": "09.2016-Present"
+        },
+        {
+          "id": 1,
+          "title": "Google",
+          "description": "Front-end Developer",
+          "timerange": "09.2014-09.2016"
+        },
+        {
+          "id": 2,
+          "title": "Yahoo",
+          "description": "Developer",
+          "timerange": "03.2013-09.2014"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "skills",
+      "title": "Languages",
+      "items": [
+        {
+          "id": 0,
+          "title": "English",
+          "percent": 100
+        },
+        {
+          "id": 1,
+          "title": "German",
+          "percent": 50
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "skills",
+      "title": "Skills",
+      "items": [
+        {
+          "id": 0,
+          "title": "Adobe",
+          "percent": 30
+        },
+        {
+          "id": 1,
+          "title": "Git",
+          "percent": 90
+        },
+        {
+          "id": 2,
+          "title": "HTML",
+          "percent": 50
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "basic",
+      "title": "Hobby",
+      "items": [
+        {
+          "id": 0,
+          "description": "Soccer, jazz music"
+        }
+      ]
+    }
+  ]
+
+}

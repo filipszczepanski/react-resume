@@ -1,0 +1,25 @@
+section {
+  position: relative;
+  margin-bottom: 2rem;
+  break-inside: avoid;
+  border: 1px solid transparent;
+}
+.section__title {
+  font-weight: 600;
+  font-size: 20px;
+  color: rgb(210, 49, 118);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+section button {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+section header .btn {
+  transform: translate(0 , 0);
+}
+
+section:hover .addSectionBlock, section header:hover .btn {
+  opacity: 1;
+}

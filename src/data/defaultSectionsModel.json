@@ -1,0 +1,32 @@
+{
+  "basic": {
+    "title": "Title",
+    "items": [
+      {
+        "id": 0,
+        "description": "Description"
+      }
+    ]
+  },
+  "timerange": {
+    "title": "Title",
+    "items": [
+      {
+        "id": 0,
+        "title": "Name",
+        "description": "Description",
+        "timerange": "09.2016-02.2017"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Title",
+    "items": [
+      {
+        "id": 0,
+        "title": "Name",
+        "percent": 80
+      }
+    ]
+  }
+}
