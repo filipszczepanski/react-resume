@@ -12,7 +12,7 @@ const Nav = ({resume, isEditing, onToggleEdit, onSave, onCancel}) => {
   }
   const _handleSave = (event) => {
     event.preventDefault();
-    onSave(Object.assign({}, resume));
+    onSave();
     onToggleEdit();
   }
 
@@ -39,14 +39,8 @@ const Nav = ({resume, isEditing, onToggleEdit, onSave, onCancel}) => {
   )
 }
 
-const updateToLocalStorage = (resume) => {
-  const resumeJSON = JSON.stringify(resume);
-  localStorage.setItem('resume', resumeJSON);
-}
-
 const mapStateToProps = (state) => {
   return {
-    resume: state.resume.present,
     isEditing: state.edit.isEditing
   }
 }
@@ -57,7 +51,7 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(actions.toggleEdit());
     },
     onSave: (resume) => {
-      updateToLocalStorage(resume)
+      dispatch(actions.saveResume());
     },
     onCancel: () => {
       dispatch(actions.undoResume());

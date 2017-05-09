@@ -1,5 +1,5 @@
 import {
-  UNDO_RESUME, SAVE_PAST_RESUME,
+  UNDO_RESUME, SAVE_RESUME,
   UPDATE_NAME, UPDATE_LASTNAME, UPDATE_JOBTITLE, UPDATE_PHOTO,
   ADD_SECTION, REMOVE_SECTION, SORT_SECTIONS, UPDATE_SECTION_TITLE, ADD_SECTION_BLOCK, UPDATE_SECTION_BLOCK, REMOVE_SECTION_BLOCK, SORT_SECTION_BLOCKS,
   UPDATE_DETAIL_TITLE, UPDATE_DETAIL_DESCRIPTION,
@@ -113,14 +113,11 @@ export function cancelEdit() {
   }
 }
 
-/* TODO: remove below */
-
-export function savePastResume() {
+export function saveResume() {
   return {
-    type: SAVE_PAST_RESUME,
+    type: SAVE_RESUME,
   }
 }
-
 
 export function undoResume() {
   return {

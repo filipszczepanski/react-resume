@@ -1,5 +1,5 @@
 export const UNDO_RESUME = 'UNDO_RESUME';
-export const SAVE_PAST_RESUME = 'SAVE_PAST_RESUME';
+export const SAVE_RESUME = 'SAVE_RESUME';
 
 export const UPDATE_NAME = 'UPDATE_NAME';
 export const UPDATE_LASTNAME = 'UPDATE_LASTNAME';

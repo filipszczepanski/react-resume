@@ -3,10 +3,7 @@ import {
   UPDATE_DETAIL_TITLE, UPDATE_DETAIL_DESCRIPTION
 } from '../actions/actionTypes';
 
-import defaultDataJSON from '../data/defaultData.json';
-const data = JSON.parse(localStorage.getItem('resume')) || defaultDataJSON;
-
-export default function info(state = {...data.info}, action) {
+export default function info(state = {}, action) {
   switch (action.type) {
     case UPDATE_NAME:
       return Object.assign({}, state, {
