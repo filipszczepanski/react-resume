@@ -1,5 +1,6 @@
 # React-Resume
-Editable Resume in React & Redux
+Editable Resume in React & Redux<br />
+[Demo](https://filipszczepanski.github.io/react-resume/)
 
 ## Usage
 
