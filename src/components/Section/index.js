@@ -1,11 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
-import { UP_ITEM, DOWN_ITEM } from '../../actions/actionTypes';
 import ContentEditable from '../ContentEditable/';
 import SectionBlock from '../SectionBlock/';
 import ButtonRemove from '../ButtonRemove';
-import ButtonSort from '../ButtonSort';
 import './Section.css';
 
 const Section = ({id, type, title, items, isEditing, onRemoveSection, onUpdateSectionTitle, onSortSections, onAddSectionBlock}) => {
@@ -35,7 +33,6 @@ const Section = ({id, type, title, items, isEditing, onRemoveSection, onUpdateSe
 
 const mapStateToProps = (state) => {
   return {
-    sections: state.resume.sections,
     isEditing: state.edit.isEditing
   }
 }

@@ -3,7 +3,7 @@ import {
   UP_ITEM, DOWN_ITEM
 } from '../actions/actionTypes';
 
-import {createId, move} from '../utils'
+import {createId, getIndexById, move} from '../utils'
 
 import defaultDataJSON from '../data/defaultData.json';
 import defaultSectionsModel from '../data/defaultSectionsModel.json';
@@ -45,25 +45,22 @@ export default function sections(state = [...data.sections], action) {
             delimSection = 0;
         }
 
-        let indexSection = 0;
-        state.map((item, index)=>{
-          if (item.id === action.sectionId) {
-            indexSection = index;
-          }
-        });
+        const indexSection = getIndexById(state, action.sectionId) || 0;
+
         const newIndex = indexSection + delimSection;
-        console.log(indexSection);
 
         return move(state, indexSection, newIndex)
 
       case UPDATE_SECTION_BLOCK:
         return state.map( section => {
           if (section.id === action.sectionId) {
-            section.items = section.items.map( block => {
-              if (block.id === action.block.id) {
-                block = Object.assign({}, block, {...action.block});
-              }
-              return block;
+            return Object.assign({}, section, {
+              items: section.items.map( block => {
+                if (block.id === action.block.id) {
+                  block = Object.assign({}, block, {...action.block});
+                }
+                return block;
+              })
             })
           }
           return section;
@@ -108,25 +105,18 @@ export default function sections(state = [...data.sections], action) {
             delim = 0;
         }
 
-        return state.map( section => {
-          if (section.id === action.sectionId) {
-
-            let indexItem;
-            section.items.map((item, index)=>{
-              if (item.id === action.blockId) {
-                indexItem = index;
-              }
-            });
-            const newIndex = indexItem + delim;
-
+        return Object.assign([], state,
+          state.map( section => {
+            if (section.id === action.sectionId) {
+              const indexItem = getIndexById(section.items, action.blockId) || 0;
+              const newIndex = indexItem + delim;
               return Object.assign({}, section, {
-                items: move(section.items, indexItem, newIndex)
-
-            })
-          }
-          return section;
-        });
-
+                  items: [...move(section.items, indexItem, newIndex)]
+              })
+            }
+            return section;
+          })
+        )
 
     default:
       return state;

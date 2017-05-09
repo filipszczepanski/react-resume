@@ -34,5 +34,4 @@ const SkillBlockConnected = connect(
   mapStateToProps
 )(SkillBlock);
 
-
 export default SkillBlockConnected;

@@ -1,13 +1,20 @@
-import Link from '../components/Link'
-
 export function createId(items) {
   let largestID = 0;
-  items.map(item => {
+  for (const item of items) {
     if (largestID <= item.id) {
       largestID = item.id + 1;
     }
-  })
+  }
   return largestID;
+}
+
+export function getIndexById(arr, id) {
+  for ( const index in arr) {
+    const item = arr[index];
+    if (item.id === id) {
+      return index;
+    }
+  }
 }
 
 export function move(arr, old_index, new_index) {

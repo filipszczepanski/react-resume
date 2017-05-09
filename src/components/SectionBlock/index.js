@@ -54,24 +54,13 @@ class SectionBlock extends Component {
           {isEditing &&
             <ButtonSort type="down" onClick={()=>onSortSectionBlocks(sectionId, id, DOWN_ITEM)} />
           }
-          
+
           {isEditing &&
             <ButtonRemove onClick={()=>onRemoveSectionBlock(sectionId, id)}/>
           }
 
         </div>
     )
-  }
-}
-
-function valueInRange(value, min, max) {
-  switch (value) {
-    case value < min:
-      return min;
-    case value > max:
-      return max;
-    default:
-      value;
   }
 }
 

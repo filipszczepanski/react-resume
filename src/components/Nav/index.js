@@ -26,9 +26,8 @@ const Nav = ({resume, isEditing, onToggleEdit, onSave, onCancel}) => {
   if (isEditing) {
     navContent = (
       <div className="btn-group" role="group" aria-label="nav group">
-        {/* <button type="button" className="btn btn-secondary" onClick={_handleCancel}>Cancel</button> */}
-        {/* <button type="button" className="btn btn-danger" onClick={_handleSave}>Save</button> */}
-        <button type="button" className="btn btn-success" onClick={_handleSave}>Done</button>
+        <button type="button" className="btn btn-secondary" onClick={_handleCancel}>Cancel</button>
+        <button type="button" className="btn btn-danger" onClick={_handleSave}>Save</button>
       </div>
     )
   }
@@ -47,7 +46,7 @@ const updateToLocalStorage = (resume) => {
 
 const mapStateToProps = (state) => {
   return {
-    resume: state.resume,
+    resume: state.resume.present,
     isEditing: state.edit.isEditing
   }
 }
@@ -61,7 +60,7 @@ const mapDispatchToProps = (dispatch) => {
       updateToLocalStorage(resume)
     },
     onCancel: () => {
-      // dispatch(actions.undoResume());
+      dispatch(actions.undoResume());
     }
   }
 }

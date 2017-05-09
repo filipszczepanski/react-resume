@@ -1,7 +1,4 @@
-import {
-  UNDO_RESUME, SAVE_PAST_RESUME
-} from '../actions/actionTypes';
-
+import { UNDO_RESUME } from '../actions/actionTypes';
 
 export default function undoableResume(reducer) {
   const initialResume = {
@@ -32,7 +29,7 @@ export default function undoableResume(reducer) {
         }
         return {
           past: [ ...past, present ],
-          present: present,
+          present: newPresent,
         }
     }
   }

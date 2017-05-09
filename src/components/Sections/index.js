@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import Section from '../Section';
 import './Sections.css';
@@ -15,7 +15,7 @@ const Sections = ({sections}) => {
 
 const mapStateToProps = (state) =>{
   return {
-    sections: state.resume.sections
+    sections: state.resume.present.sections
   }
 }
 

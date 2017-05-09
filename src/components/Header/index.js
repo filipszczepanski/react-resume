@@ -35,7 +35,7 @@ const Header = ({name, lastname, jobtitle, details, photo, onUpdateName, onUpdat
 }
 
 const mapStateToProps = (state) => {
-  return {...state.resume.info};
+  return {...state.resume.present.info};
 }
 
 const mapDispatchToProps = (dispatch) => {

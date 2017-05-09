@@ -14,7 +14,6 @@ export default function info(state = {...data.info}, action) {
       });
 
     case UPDATE_LASTNAME:
-      console.log(action);
       return Object.assign({}, state, {
         lastname: action.lastname,
       });
